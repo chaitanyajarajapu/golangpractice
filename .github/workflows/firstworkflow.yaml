@@ -25,18 +25,17 @@ jobs:
       - name: docker image list
         run: docker image ls
 
+      - name: docker login
+        run: docker login -u $ {{ secrets.dockerusername }} -p $ {{ secrets.dockerpassword }}
+
       - name: docker duild
         run: docker build -t chaitanyajarajapu/mymultiimage:10.0 .
 
-        
+      - name: docker image list
+        run: docker image ls
 
-
-  second-job:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Second step
-        run: echo "Second Step"
-
+      - name: docker image push
+        run: docker push chaitanyajarajapu/mymultiimage:10.0
   
 
 

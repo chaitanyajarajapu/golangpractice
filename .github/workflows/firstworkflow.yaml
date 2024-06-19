@@ -7,8 +7,9 @@ on:
   workflow_dispatch:
 
 jobs:
-  first-job:
+  build:
     runs-on: ubuntu-latest
+      
     steps:
       - uses: actions/checkout@v3
       
@@ -17,7 +18,7 @@ jobs:
       
       - name: Run a custom script
         run: go build main.go
-      
+
         
 
 

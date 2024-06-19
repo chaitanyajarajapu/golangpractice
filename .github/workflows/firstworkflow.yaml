@@ -26,7 +26,7 @@ jobs:
         run: docker image ls
 
       - name: docker login
-        run: docker login --usrname ${{ secrets.dockerusername }} --password ${{ secrets.dockerpassword }}
+        run: docker login --username ${{ secrets.dockerusername }} --password ${{ secrets.dockerpassword }}
 
       - name: docker duild
         run: docker build -t chaitanyajarajapu/mymultiimage:10.0 .

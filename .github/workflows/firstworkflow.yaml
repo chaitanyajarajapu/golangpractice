@@ -23,7 +23,7 @@ jobs:
         run: docker -v
 
       - name: docker image list
-        run: docker image -a
+        run: docker image ls
 
       - name: docker duild
         run: docker build -t chaitanyajarajapu/mymultiimage:10.0 .

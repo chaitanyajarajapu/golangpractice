@@ -41,7 +41,7 @@ jobs:
       - name: Azure login with Github action
         uses: azure/login@v1
         with:
-          creds: '${{ secrets.AZURECREDENTIALS}}'
+          creds: '${{ secrets.azurecredentials}}'
 
       - name: Azure login command
         run: |

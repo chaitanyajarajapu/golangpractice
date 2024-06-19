@@ -1,0 +1,32 @@
+name: firstworkflow
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  first-job:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Run a oneline scirpt
+        run: go mod init main
+      
+      - name: Run a custom script
+        run: go build main.go
+      
+        
+
+
+  second-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Second step
+        run: echo "Second Step"
+
+  
+
+
